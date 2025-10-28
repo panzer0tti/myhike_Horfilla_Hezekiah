@@ -1,3 +1,4 @@
+import { getFirestore } from "firebase/firestore";
 // src/firebaseAPIConfig.js
 // -------------------------------------------------------------
 // Part of the COMP1800 Project 1 Course (BCIT).
@@ -42,3 +43,10 @@ const app = initializeApp(firebaseConfig);
 // or signout operations (that's why we export it).
 // ---------------------------------------------------------
 export const auth = getAuth(app);
+
+// ---------------------------------------------------------
+// Create and export the Firestore database service.
+// You can import "db" anywhere to read from or write to
+// Firestore collections and documents.
+// ---------------------------------------------------------
+export const db = getFirestore(app);
